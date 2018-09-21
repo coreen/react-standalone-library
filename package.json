@@ -1,0 +1,26 @@
+{
+  "name": "lightweight-react-library",
+  "version": "1.0.0",
+  "description": "Example React component library usage via window.[libraryName].[componentName]",
+  "scripts": {
+    "build": "./node_modules/.bin/webpack",
+    "transpile": "./node_modules/.bin/tsc -p . --allowJs false --declaration true"
+  },
+  "devDependencies": {
+    "@types/react": "^16.4.14",
+    "@types/react-dom": "^16.0.7",
+    "awesome-typescript-loader": "^5.2.1",
+    "css-loader": "^1.0.0",
+    "mini-css-extract-plugin": "^0.4.3",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "tsc": "^1.20150623.0",
+    "typescript": "^3.0.3",
+    "webpack": "^4.19.1",
+    "webpack-cli": "^3.1.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.0.0",
+    "react-dom": ">=16.0.0"
+  }
+}
