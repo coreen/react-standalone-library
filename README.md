@@ -62,3 +62,10 @@ ERROR in [at-loader] ./node_modules/@types/node/index.d.ts:804:38
     TS2304: Cannot find name 'Set'.
 ```
 
+--------
+
+If bundle size is too large, there may be too many dependencies that your React component is required to have in the final bundle. To help with debugging this,
+* Uncomment the last line in `webpack.config.js` (should be initialization of `BundleAnalyzerPlugin`)
+* Rerun `yarn build`
+
+This will automatically open http://127.0.0.1:8888 in your default browser which is a visual representation of files in your published library bundle. From there, you can track down large dependencies by searching the packages in `yarn.lock` and trimming down based on usage.

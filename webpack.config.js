@@ -1,6 +1,7 @@
-const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const UglifyJsWebpackPlugin = require('uglifyjs-webpack-plugin');
+const path = require('path')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const UglifyJsWebpackPlugin = require('uglifyjs-webpack-plugin')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 module.exports = {
 	entry: './src/index.tsx',
@@ -40,10 +41,13 @@ module.exports = {
 		'react-dom': 'ReactDOM'
 	},
 	plugins: [
+		// Note the bundle.css file is not uglified
 		new MiniCssExtractPlugin({
 			filename: 'bundle.css'
 		}),
 		// Used to minimize the bundle.js size
-		new UglifyJsWebpackPlugin()
+		new UglifyJsWebpackPlugin(),
+		// Uncomment below to see a visual representation of the bundle for possible shrinking
+		// new BundleAnalyzerPlugin()
 	]
 }
