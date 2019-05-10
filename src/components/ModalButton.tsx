@@ -16,19 +16,22 @@ export class ModalButton extends React.Component<Props, State> {
 		}
 	}
 
-	private onClick = (): void => this.setState({ isDisplayed: !this.state.isDisplayed })
+	private openModal = (): void => this.setState({ isDisplayed: true })
+	private closeModal = (): void => this.setState({ isDisplayed: false })
 
 	public render(): React.ReactNode {
 		// TODO: add react-intl for i18n
 		const footer = (
-			<div>
-				<button>Close</button>
+			<div className='modal-footer'>
+				<button onClick={this.closeModal}>
+					Close
+				</button>
 			</div>
 		)
 
 		return (
-			<div>
-				<button onClick={this.onClick}>
+			<div className='interaction'>
+				<button onClick={this.openModal}>
 					Click for Modal
 				</button>
 				{

@@ -1,1 +1,27 @@
-// TODO: add modal styles here;
+.modal {
+	border: 2px solid black;
+	border-radius: 0.2em;
+	display: inline-block;
+	min-width: 300px;
+
+	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+	z-index: 3;
+	position: absolute;
+	margin-left: 25%;
+	background-color: white;
+}
+
+.modal-header {
+	margin: 8px;
+}
+
+.modal-body {
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	padding: 10px;
+}
+
+.modal-footer{
+	text-align: right;
+	padding: 5px;
+}

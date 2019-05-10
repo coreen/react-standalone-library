@@ -16,8 +16,12 @@ export default class Modal extends React.PureComponent<Props> {
 
 		return (
 			<div className='modal'>
-				<div className='modal-header'>{title}</div>
-				<div className='modal-body'>{contents}</div>
+				<div className='modal-header'>
+					<b>{title}</b>
+				</div>
+				<div className='modal-body'>
+					<p>{contents}</p>
+				</div>
 				{footer}
 			</div>
 		)
